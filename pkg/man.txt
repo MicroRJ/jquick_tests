@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Created-By: RJ
+Main-Class: com.cid.jquick_test.TestRunner
