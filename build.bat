@@ -1,26 +1,41 @@
 @echo off
-REM v - verbose 
-REM c - create jar
-REM f - explict jar file 
-REM 0 - no compression 
+REM call lib.bat
 
-set Fout=out\ 
+REM v - verbose
+REM c - create jar
+REM f - explict jar file
+REM 0 - no compression
+
+set Napp=jquick_test.jar
+set Nman=man.txt
+set Fout=out\
 set Fpkg=pkg\
 set Fraw=raw\
+set Froot=src\
 set Fsrc=src\com\cid\jquick_test\
 set Flib=lib\
-set Fext=E:\Desktop\modules\jquick\
+set Fcl=compile_list.txt
+set Fos=output.txt
+set Fpoj=W:\projects\
 
-set Napp=jquick_test.jar 
-set Nman=man.txt
-mkdir %Fout%
-mkdir %Fpkg%
-mkdir %Fsrc%
-mkdir %Flib%
+echo BATCH BUILD PROJECT %Fapp%
 
-set Cjava=%Fsrc%TestRunner.java %Fsrc%R.java %Fsrc%AOO.java %Fsrc%AOF.java %Fsrc%Objects.java %Fsrc%Test.java %Fsrc%Testable.java %Fsrc%Models.java
+IF NOT EXIST %Fout% mkdir %Fout%
+IF NOT EXIST %Fraw% mkdir %Fraw%
+IF NOT EXIST %Fsrc% mkdir %Fsrc%
+IF NOT EXIST %Flib% mkdir %Flib%
 
-javac -cp %Fext%%Fout% -d %Fout% %Cjava%
-jar cfm0 %Fpkg%%Napp% %Fpkg%%Nman% -C %Fext%%Fout% . -C %Fout% . -C %Fraw% .
-jar tf %Fpkg%%Napp%
+dir /a-D /S /B %Froot% > %Fcl%
+
+set MODULE_A=%Fpoj%jquick\%Fout%
+set MODULE_B=%Fpoj%dbot\%Fout%
+
+set CLASSPATH=%MODULE_A%;%MODULE_B%
+
+javac -g -cp %CLASSPATH% -d %Fout% @%Fcl%
+REM v
+REM
+jar cfm0 %Fpkg%%Napp% %Fpkg%%Nman% -C %MODULE_A% . -C %MODULE_B% . -C %Fout% . -C %Fraw% .
+
+jar tf %Fpkg%%Napp% > %Fos%
 java -jar %Fpkg%%Napp%

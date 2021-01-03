@@ -1,6 +1,8 @@
 package com.cid.jquick_test;
 
+import com.cid.jquick.JQuick;
 import com.cid.jquick.mappers.ToJson;
+import com.cid.jquick.mappers.ToObject;
 import com.cid.jquick.transpilation.JAst.JArr;
 import com.cid.jquick.transpilation.JAst.JExp;
 import com.cid.jquick.transpilation.JAst.JObj;
@@ -44,7 +46,7 @@ public class AOF extends Test {
 
         final Person[] mapped = from.to_object(Person[].class);
 
-        final JArr what = from.from_object(mapped);
+        final JArr what = (JArr) ToJson.to_json(mapped);
 
         {
             final JObj a = ToJson.to_json(mapped[0]);       // expected a object Person

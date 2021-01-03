@@ -1,0 +1,49 @@
+{
+  "t": "READY",
+  "s": 1,
+  "op": 0,
+  "d": {
+    "v": 8,
+    "user_settings": {},
+    "user": {
+      "verified": true,
+      "username": "Spikes",
+      "mfa_enabled": false,
+      "id": "792846451294208023",
+      "flags": 0,
+      "email": null,
+      "discriminator": "5259",
+      "bot": true,
+      "avatar": "d5ac9efab5d3b6a1f7546e2a595beb03"
+    },
+    "session_id": "a8ff9097bed1380382d9d3c0eced7954",
+    "relationships": [],
+    "private_channels": [],
+    "presences": [],
+    "guilds": [
+      {
+        "unavailable": true,
+        "id": "651907398969327635"
+      },
+      {
+        "unavailable": true,
+        "id": "792856196176150598"
+      }
+    ],
+    "guild_join_requests": [],
+    "geo_ordered_rtc_regions": [
+      "us-south",
+      "us-east",
+      "us-central",
+      "us-west",
+      "brazil"
+    ],
+    "application": {
+      "id": "792846451294208023",
+      "flags": 0
+    },
+    "_trace": [
+      "[\"gateway-prd-main-8n7x\",{\"micros\":66344,\"calls\":[\"discord-sessions-prd-2-77\",{\"micros\":65007,\"calls\":[\"start_session\",{\"micros\":34475,\"calls\":[\"api-prd-main-tmd3\",{\"micros\":31888,\"calls\":[\"get_user\",{\"micros\":2501},\"add_authorized_ip\",{\"micros\":1768},\"get_guilds\",{\"micros\":4501},\"coros_wait\",{\"micros\":1}]}]},\"guilds_connect\",{\"micros\":2,\"calls\":[]},\"presence_connect\",{\"micros\":9290,\"calls\":[]}]}]}]"
+    ]
+  }
+}

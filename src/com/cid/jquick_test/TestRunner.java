@@ -1,5 +1,6 @@
 package com.cid.jquick_test;
 
+import com.cid.dbot.discord.models.gateway.frames.FrameReady;
 import com.cid.jquick.JQuick;
 
 import java.io.File;
@@ -25,6 +26,22 @@ public class TestRunner {
 
 
     public static void run() {
+
+
+        FrameReady frame_ready = new JQuick(R.file_frame_ready).map(FrameReady.class);
+
+
+
+
+
+
+
+
+
+
+
+
+
         for (Test test : TESTS)
         {
             final ByteBuffer buffer = test.get_buffer_to_parse();

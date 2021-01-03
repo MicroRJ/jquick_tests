@@ -1,0 +1,8 @@
+W:\projects\jquick_test\src\com\cid\jquick_test\AOF.java
+W:\projects\jquick_test\src\com\cid\jquick_test\AOO.java
+W:\projects\jquick_test\src\com\cid\jquick_test\Models.java
+W:\projects\jquick_test\src\com\cid\jquick_test\Objects.java
+W:\projects\jquick_test\src\com\cid\jquick_test\R.java
+W:\projects\jquick_test\src\com\cid\jquick_test\Test.java
+W:\projects\jquick_test\src\com\cid\jquick_test\Testable.java
+W:\projects\jquick_test\src\com\cid\jquick_test\TestRunner.java

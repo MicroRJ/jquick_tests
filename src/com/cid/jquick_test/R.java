@@ -10,6 +10,7 @@ public class R {
     public static ByteBuffer file_aoo_json;
     public static ByteBuffer file_fao_json;
     public static ByteBuffer file_objects_json;
+    public static ByteBuffer file_frame_ready;
 
     public static ByteBuffer load_file(String name_in_jar) {
         ByteBuffer result = null;
@@ -28,5 +29,6 @@ public class R {
         file_aoo_json = load_file("aoo.json");
         file_fao_json = load_file("fao.json");
         file_objects_json = load_file("objects.json");
+        file_frame_ready = load_file("frame_ready.json");
     }
 }
